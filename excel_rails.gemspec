@@ -23,7 +23,10 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "excel_rails.gemspec",
+     "init.rb",
      "lib/excel_rails.rb",
+     "rails/init.rb",
      "test/helper.rb",
      "test/test_excel_rails.rb"
   ]
