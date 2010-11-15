@@ -7,6 +7,20 @@ Based on Defv's railsxls plugin (http://github.com/DefV/railsxls) without the Ja
 
 Also inspired heavily from prawn_rails gem (http://github.com/Volundr/prawn-rails).
 
+Installation
+============
+
+Note that this gem works only with Rails 3
+
+Put the following line in your Gemfile
+gem 'excel_rails'
+
+Run 'bundle install'
+
+Name your views as action.xls.rxls (See below for usage)
+
+Make a request to your application with .xls extension to respond to excel.
+
 Dependencies
 ============
 
@@ -19,7 +33,7 @@ Example
 
 Example spreadsheet usage as found here: http://github.com/jacobat/ruby-spreadsheet
 
--- in the view "index.xls.rxls
+-- in the view "index.xls.rxls"
 
 excel_document(:filename => "all_lines.xls") do |workbook|
   sheet = workbook.create_worksheet
@@ -47,6 +61,9 @@ excel_document(:filename => "all_lines.xls") do |workbook|
   4.times do |x| sheet.row(x + 1).set_format(0, bold) end
 end
 
+In the above file excel_document yields a new Spreadsheet:Workbook object to the block.
+If you provide a :filename option to the excel_document method, a filename will be provided to the downloaded file.
+If your browser supports it you can inline the excel document as well.
 
 -- in the controller
 
