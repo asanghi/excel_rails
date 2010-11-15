@@ -5,12 +5,12 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "excel_rails"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Hook rxls to generate Excel documents in Rails 3}
+    gem.description = %Q{Allows you to program spreadsheets using .rxls views}
     gem.email = "asanghi@me.com"
     gem.homepage = "http://github.com/asanghi/excel_rails"
     gem.authors = ["Aditya Sanghi"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
+    # gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
