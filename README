@@ -65,6 +65,13 @@ In the above file excel_document yields a new Spreadsheet:Workbook object to the
 If you provide a :filename option to the excel_document method, a filename will be provided to the downloaded file.
 If your browser supports it you can inline the excel document as well.
 
+If you provide :template_path - path to existed xls file, workbook will be loaded from the file.
+
+excel_document(:filename => "report.xls", :template_path => "/tmp/report_template.xls") do |workbook|
+    sheet = workbook.worksheet 0
+    ... # any staff form previous example
+end
+
 -- in the controller
 
 def index

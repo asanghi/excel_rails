@@ -18,7 +18,7 @@ module Spreadsheet
         download = true if (filename && download == nil)
         disposition = download ? "attachment;" : "inline;"
         disposition += " filename=#{filename}" if filename
-        headers["Content-Disposition"]=disposition
+        headers["Content-Disposition"] = disposition
       end
     end
 
