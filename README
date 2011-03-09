@@ -7,6 +7,11 @@ Based on Defv's railsxls plugin (http://github.com/DefV/railsxls) without the Ja
 
 Also inspired heavily from prawn_rails gem (http://github.com/Volundr/prawn-rails).
 
+The gem has a new cool feature which lets you pick a hand-crafted excel file as a template in your
+view. Pass the path to your excel template using the :template_path option and instead of creating
+a blank spreadsheet for you to fill, your excel file will be parsed and yielded for you to fill in the blank.
+Thanks to Stepan Filatov @ https://github.com/sfilatov
+
 Installation
 ============
 
@@ -80,7 +85,7 @@ def index
   respond_to do |format|
     format.html # index.html.erb
     format.xml  { render :xml => @lines }
-    format.xls 
+    format.xls
   end
 end
 
