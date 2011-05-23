@@ -31,6 +31,8 @@ module Spreadsheet
   end
 end
 
-Mime::Type.register_alias "application/xls", :xls
+unless Mime::Type.lookup_by_extension :xls
+  Mime::Type.register_alias "application/xls", :xls
+end
 ActionView::Template.register_template_handler(:rxls, Spreadsheet::Rails::TemplateHandler)
 ActionView::Base.send(:include, Spreadsheet::Rails::SpreadsheetHelper)
