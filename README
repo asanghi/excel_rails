@@ -77,7 +77,7 @@ excel_document(:filename => "report.xls", :template_path => "/tmp/report_templat
     ... # any staff form previous example
 end
 
-If you provide a :renderer option to the excel_document method, you can use your customized Spreadsheet::Workbook to create a newe excel file.
+If you provide a :renderer option to the excel_document method, you can use your customized Spreadsheet::Workbook to create a new excel file.
 
 Your view "index.xls.rxls" file could look like this:
 
