@@ -8,7 +8,8 @@ module Spreadsheet
         download = opts.delete(:force_download)
         filename = opts.delete(:filename)
         template_path = opts.delete(:template_path)
-        workbook = template_path ? Spreadsheet.open(template_path) : Spreadsheet::Workbook.new
+        workbook_class = opts.delete(:renderer) || Spreadsheet::Workbook
+        workbook = template_path ? Spreadsheet.open(template_path) : workbook_class.new
         yield(workbook)
         disposition(download, filename) if (download || filename)
         workbook
