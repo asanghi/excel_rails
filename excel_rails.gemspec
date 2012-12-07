@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aditya Sanghi"]
-  s.date = "2012-01-27"
+  s.date = "2012-12-07"
   s.description = "Allows you to program spreadsheets using .rxls views"
   s.email = "asanghi@me.com"
   s.extra_rdoc_files = [
@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/asanghi/excel_rails"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.11"
+  s.rubygems_version = "1.8.24"
   s.summary = "Hook rxls to generate Excel documents in Rails 3"
 
   if s.respond_to? :specification_version then
