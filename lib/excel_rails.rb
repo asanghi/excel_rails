@@ -26,8 +26,9 @@ module Spreadsheet
     class TemplateHandler
       class_attribute :default_format
       self.default_format = :xls
-      def self.call(template)
-        "sio = StringIO.new; #{template.source.strip}.write(sio); sio.string"
+      def self.call(template, source = nil)
+        text = source || template.source
+        "sio = StringIO.new; #{text.strip}.write(sio); sio.string"
       end
     end
   end
